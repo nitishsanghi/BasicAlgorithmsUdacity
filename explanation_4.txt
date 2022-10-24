@@ -1,1 +1,1 @@
-A simple implementation involving a single traversal would be to count number of 0, 1, and 2 and stitch together an array(list) with the number of 0s, 1s, and 2s. The implementation has time complexity of O(n).
+A simple implementation involving a single traversal would be to count number of 0, 1, and 2 and stitch together an array(list) with the number of 0s, 1s, and 2s. The implementation has time complexity of O(n). The space complexity is O(1). 

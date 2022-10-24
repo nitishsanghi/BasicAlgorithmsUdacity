@@ -29,6 +29,9 @@ class Trie:
         self.root = TrieNode()
 
     def insert(self, word):
+        if word is None:
+            print("Invalid None type object detected")
+            return
         node = self.root
         for x in word:
             if x not in node.children:
@@ -38,6 +41,8 @@ class Trie:
 
     def find(self, prefix):
         # Find the Trie node that represents this prefix
+        if prefix is "":
+            return
         node = self.root
         for x in prefix:
             if x not in node.children:
@@ -54,7 +59,26 @@ wordList = [
 ]
 for word in wordList:
     MyTrie.insert(word)
+
+MyTrie1 = Trie()
+wordList1 = [
+    None,"a", "an", 
+    "fun", "fund", 
+    "trie", "tried", "trig"
+]
+for word in wordList1:
+    MyTrie1.insert(word)
+
+MyTrie2 = Trie()
+wordList2 = [
+    "", "an", 
+    "fun", "fund", 
+    "trie", "tried", "trig"
+]
+for word in wordList2:
+    MyTrie2.insert(word)
     
+
 from ipywidgets import widgets
 from IPython.display import display
 from ipywidgets import interact
@@ -68,3 +92,25 @@ def f(prefix):
     else:
         print('')
 interact(f,prefix='');
+
+def g(prefix):
+    if prefix != '':
+        prefixNode = MyTrie1.find(prefix)
+        if prefixNode:
+            print('\n'.join(prefixNode.suffixes()))
+        else:
+            print(prefix + " not found")
+    else:
+        print('')
+interact(g,prefix='');
+
+def h(prefix):
+    if prefix != '':
+        prefixNode = MyTrie2.find(prefix)
+        if prefixNode:
+            print('\n'.join(prefixNode.suffixes()))
+        else:
+            print(prefix + " not found")
+    else:
+        print('')
+interact(h,prefix='');

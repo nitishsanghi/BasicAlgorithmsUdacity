@@ -3,3 +3,13 @@ The Trie and TrieNode class is used as explained and defined in the udacity less
 The RouteTrie uses the RouteTrieNode class to build up the Trie for handle and paths. It consists of 3 functions: initialisation, insert, and find. The insert function adds a TrieNode for each path if not already there and sets the nodes handler if available. The find function using a for loop returns the handler for the match. 
 
 The Router class is the final where everything comes together. 
+
+The time and space complexities:
+
+RouteTrieNode Class: insert function time complexity is O(1) and space complexity is O(1).
+
+RouteTrie Class: insert function time complexity is O(n) and space complexity is O(n) where n is the number of parts a path has.
+
+RouteTrie Class: find function time complexity is O(n) and space complexity is O(1) where n is the number of parts a path has.
+
+Route Class functions use the above two classes and hence have time and space complexity dictated by those.

@@ -30,7 +30,7 @@ def binary_search(input_list, low_index, high_index, number):
     
 def pivot_index(input_list, low_index, high_index):
     if low_index == high_index:
-        low
+        return low_index
     if low_index > high_index:
         return -1
     mid = int((low_index + high_index) / 2)
@@ -61,3 +61,7 @@ test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+test_function([[6, 7], 7])
+test_function([[6, 7], 8])
+test_function([[6], 8])
+test_function([[], 8])

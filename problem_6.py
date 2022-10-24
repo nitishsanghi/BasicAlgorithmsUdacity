@@ -5,6 +5,10 @@ def get_min_max(ints):
     Args:
        ints(list): list of integers containing one or more integers
     """
+    if ints is None:
+        return None
+    if not len(ints):
+        return "Empty list input"
     max_val = ints[0]
     min_val = ints[0]
     for i in range(1, len(ints)):
@@ -24,7 +28,13 @@ m = [i for i in range(0, 10000)]  # a list containing 0 - 9999
 random.shuffle(m)
 n = [i for i in range(0, 1)]  # a list containing 0 - 0
 random.shuffle(n)
+o = [i for i in range(0, 0)]  # a list containing nothing
+random.shuffle(o)
+p = None  # a None type
+
 
 print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 print ("Pass" if ((0, 9999) == get_min_max(m)) else "Fail")
 print ("Pass" if ((0, 0) == get_min_max(n)) else "Fail")
+print ("Pass" if ("Empty list input" == get_min_max(o)) else "Fail")
+print ("Pass" if (None == get_min_max(p)) else "Fail")
