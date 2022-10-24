@@ -1,0 +1,5 @@
+The Trie and TrieNode class is used as explained and defined in the udacity lesson with some modifications and function additions required for the HTTP router application. The RouteTrieNode class is the fundamental class on which the whole implementation is built. It has an initialisation function with an input argument for handle and a insert function. 
+
+The RouteTrie uses the RouteTrieNode class to build up the Trie for handle and paths. It consists of 3 functions: initialisation, insert, and find. The insert function adds a TrieNode for each path if not already there and sets the nodes handler if available. The find function using a for loop returns the handler for the match. 
+
+The Router class is the final where everything comes together. 

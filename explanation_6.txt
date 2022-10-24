@@ -1,0 +1,1 @@
+The input array is a random list of number in no particular order. A simple implementation is to initialize the first element to be min and max and then traverse through array and checking each element for min and max values and replacing if necessary. This implementation would have time complexity of O(n).

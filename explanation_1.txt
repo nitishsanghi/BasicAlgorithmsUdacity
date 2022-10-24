@@ -1,0 +1,1 @@
+To find the sqrt with time complexity of O(log n) using binary search will be the way to go. The solution implements binary search for sqrt using a while loop. A recursive implementation can also be used for the solution.
